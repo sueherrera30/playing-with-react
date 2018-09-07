@@ -2,6 +2,7 @@ import React from "react";
 
 export class Home extends React.Component {
     render() {
+        console.log(this.props)
         return (
             <div>
                 <h3> thiss is a little  sweet home</h3>
