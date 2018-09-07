@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 export class Header extends React.Component {
     render() {
@@ -13,7 +14,16 @@ export class Header extends React.Component {
                      <p>my hobbies are:</p>
                      {this.props.person.hobbies.map((hobby,i)=> {return <li key= {i} >{ hobby }</li> })}
                  </ul>
-            </div>    
+                 <hr></hr>
+                { this.props.children }
+            </div>
+            
         );
     }
+}
+Header.propTypes = {
+    name: PropTypes.string,
+    song: PropTypes.string,
+    person: PropTypes.object,
+    children: PropTypes.element.isRequired
 }
