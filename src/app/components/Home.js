@@ -6,23 +6,28 @@ export class Home extends React.Component {
 
     constructor(props) {
         super();
-        this.age = props.person.age;
+        this.state = {
+            age: props.person.initialAge,
+            status: "worried",
+        }
     }
     subirEdad() {
-        this.age += 10; 
-        console.log(this.age)
+        console.log(this.state.age)
+        this.setState({
+            age: this.state.age += 10,
+        });
     }
     render() {
         return (
             <div>
                 <h3> thiss is a little  sweet home</h3>
-                <p>me llamo { this.props.person.name } y tengo { }</p>  
+                <p>me llamo { this.state.age } y tengo { }</p>  
                 <button onClick = {this.subirEdad.bind(this) }> sube la edad </button>     
             </div>
         );
     }
 }
-
 Home.propTypes = {
     age: PropTypes.number,
+    status: PropTypes.string,
 }

@@ -9,13 +9,13 @@ class App extends React.Component {
         const person = {
             name: "susu",
             hobbies: ["cello","crossfit","mahikari","giving classes"],
-            age: 26,
+            initialAge: 26,
         }
         return (
             <div>
                 <Header/>
                 <h1> hello, Im a pretty newcomponent</h1>
-                <Home person = { person }/>
+                <Home person = { person } />
             </div>
         );
     }
