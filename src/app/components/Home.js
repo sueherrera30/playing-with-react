@@ -30,7 +30,9 @@ export class Home extends React.Component {
                 <h3> thiss is a little  sweet home</h3>
                 <p>me llamo { this.state.age } </p>  
                 <p>tengo { this.state.status } novios :3 </p>  
-                <button onClick = {this.subirEdad.bind(this) }> sube la edad </button>     
+                <button onClick = {this.subirEdad.bind(this) }> sube la edad </button><br/>
+                <button onClick = { this.props.saludos } > say hi </button>  
+                   
             </div>
         );
     }

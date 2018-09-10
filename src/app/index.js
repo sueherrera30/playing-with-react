@@ -4,6 +4,10 @@ import { Header } from "./components/header"
 import { Home } from "./components/Home"
 
 class App extends React.Component {
+
+    saludosAmigos() {
+        alert("que ondi");
+    }
     
     render() {
         const person = {
@@ -15,7 +19,7 @@ class App extends React.Component {
             <div>
                 <Header/>
                 <h1> hello, Im a pretty newcomponent</h1>
-                <Home person = { person } />
+                <Home person = { person }  saludos = { this.saludosAmigos }/>
             </div>
         );
     }
